@@ -87,6 +87,5 @@ resource "aws_lambda_function" "my_lambda_function" {
   }  
 
   # Read the Lambda function code from local disk
-  filename         = "lambda_function_payload.zip"
-
+  filename         = data.archive_file.lambda.output_path
 }
